@@ -28,8 +28,10 @@ lin_reg.fit(x_train, y_train)
 st.header("Linear Regression")
 st.caption("A linear regression model will now be fit to the training data.")
 
-fig = px.scatter(train, x = 'Height', y = 'Weight') 
-st.plotly_chart(fig, theme="streamlit", use_container_width=True)
+fig1 = px.scatter(train, x = 'Height', y = 'Weight') 
+fig2 = px.line(x= x_train, y = lin_reg.predict(x_train))
+st.plotly_chart(fig1, theme="streamlit", use_container_width=True)
+st.plotly_chart(fig2, theme="streamlit", use_container_width=True)
 #st.line_chart(x = x_train, y = lin_reg.predict(x_train), color="blue" )
 
 
