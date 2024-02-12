@@ -33,7 +33,7 @@ fig1 = px.scatter(train, x = 'Height', y = 'Weight')
 st.plotly_chart(fig1, theme="streamlit", use_container_width=True)
 
 
-fig2 = px.line(train, x = "Weight", y = 'Weight')
+fig2 = px.line(x = train["Weight"], y = train['Weight'])
 st.plotly_chart(fig2, theme="streamlit", use_container_width=True)
 lin_pred = lin_reg.predict(x_test)
 results = pd.DataFrame(data = {"pred": lin_pred, "act": y_test})
