@@ -32,7 +32,7 @@ fig1 = px.scatter(train, x = 'Height', y = 'Weight')
 
 st.plotly_chart(fig1, theme="streamlit", use_container_width=True)
 
-type(lin_reg.predict(train['Height']))
+st.write(type(lin_reg.predict(x_train)))
 
 #fig2 = px.line(x = train["Height"], y = )
 #st.plotly_chart(fig2, theme="streamlit", use_container_width=True)
