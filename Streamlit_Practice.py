@@ -17,11 +17,7 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.1, random_
 train = pd.merge(x_train, y_train,  left_index=True, right_index=True)
 st.write(train.head())
 
-fig, ax = plt.subplots()
-ax.scatter(train['Height'], train['Weight'])
-ax.xlabel = 'Height'
-ax.ylabel = 'Weight'
-st.pyplot(fig)
+st.scatter_chart(data=train, x = 'Height', y = 'Weight')
 
 lin_reg = LinearRegression()
 lin_reg.fit(x_train, y_train)
