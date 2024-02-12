@@ -32,7 +32,7 @@ st.header("Linear Regression")
 st.caption("A linear regression model will now be fit to the training data.")
 example = train
 example['pred'] = lin_reg.predict(x_train)
-fig = px.scatter(x=example['Height'], y=example['Weight'], label = {'x': 'Height', 'y': 'Weight'})
+fig = px.scatter(x=example['Height'], y=example['Weight'])
 fig.add_trace(go.Scatter(x=example['Height'], y=example['pred'], marker = {'color' : 'red'}, name="Model"))
 st.plotly_chart(fig, theme="streamlit", use_container_width=True)
 
