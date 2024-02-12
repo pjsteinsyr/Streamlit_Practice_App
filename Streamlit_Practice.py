@@ -44,4 +44,5 @@ st.write(f'R square = {metrics.r2_score(y_test, lin_pred)}')
 st.write(f'Mean squared Error = {metrics.mean_squared_error(y_test, lin_pred)}')
 
 st.header('Try it for yourself!')
-
+number = st.number_input('Insert a number')
+st.write(number)
