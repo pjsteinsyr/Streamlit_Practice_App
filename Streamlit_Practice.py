@@ -54,7 +54,7 @@ st.write(f'Mean squared Error = {metrics.mean_squared_error(y_test, lin_pred)}')
 st.sidebar.header('Try it for yourself!')
 number = st.sidebar.number_input('Insert your height (cms)')
 ur_number = pd.DataFrame(data = {"Height" : [number]})
-if st.button("Print Weight"):
+if st.sidebar.button("Print Weight"):
     # Display the entered number when the button is clicked
-    st.write(f"Your estimated weight is {round(lin_reg.predict(ur_number)[0],2)} kgs.")
+    st.sidebar.write(f"Your estimated weight is {round(lin_reg.predict(ur_number)[0],2)} kgs.")
     st.balloons()
