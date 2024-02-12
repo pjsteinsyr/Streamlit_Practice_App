@@ -27,7 +27,7 @@ st.header("Linear Regression")
 st.caption("A linear regression model will now be fit to the training data.")
 
 st.scatter_chart(data = train, x = 'Height', y = 'Weight', color="red")
-st.line_chart(x = x_train, y = lin_reg.predict(x_train), color="blue" )
+#st.line_chart(x = x_train, y = lin_reg.predict(x_train), color="blue" )
 
 
 lin_pred = lin_reg.predict(x_test)
