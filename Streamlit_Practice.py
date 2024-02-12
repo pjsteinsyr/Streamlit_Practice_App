@@ -7,8 +7,8 @@ from sklearn.model_selection import train_test_split
 
 st.title("Peter's Practice Site")
 data = pd.read_csv("data.csv")
-X = df.iloc[:, :-1]
-y = df.iloc[:, -1]
+X = data.iloc[:, :-1]
+y = data.iloc[:, -1]
 
 st.write(x)
 st.write(y)
