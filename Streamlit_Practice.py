@@ -9,6 +9,7 @@ import plotly.graph_objects as go
 from sklearn import metrics
 
 st.title("Peter's Practice Site")
+st.image('weight.jpg')
 data = pd.read_csv("data.csv")
 st.header('The Data')
 st.write(data.head())
