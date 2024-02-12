@@ -47,5 +47,5 @@ st.header('Try it for yourself!')
 number = st.number_input('Insert a number')
 #your_prediction = lin_reg.predict(number)[0]
 if st.button("Print Number"):
-        # Display the entered number when the button is clicked
-        st.write(f"The entered number is: {number}")
+    # Display the entered number when the button is clicked
+    st.write(f"The entered number is: {number}")
