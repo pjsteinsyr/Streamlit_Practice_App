@@ -26,12 +26,8 @@ lin_reg.fit(x_train, y_train)
 st.header("Linear Regression")
 st.caption("A linear regression model will now be fit to the training data.")
 
-plt.scatter(x_train, y_train, color="red")
-plt.plot(x_train, lin_reg.predict(x_train), color="blue" )
-plt.title("Height and Weight - Training Set")
-plt.xlabel("Height")
-plt.ylabel("Weight")
-st.write(plt.show())
+st.scatter_chart(data = train, x = 'Height', y = 'Weight', color="red")
+st.line_chart(x = x_train, y = lin_reg.predict(x_train), color="blue" )
 
 
 lin_pred = lin_reg.predict(x_test)
