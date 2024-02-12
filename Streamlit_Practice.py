@@ -35,7 +35,7 @@ st.plotly_chart(fig1, theme="streamlit", use_container_width=True)
 x_example = x_train
 y_example = lin_reg.predict(x_train)
 
-st.write(type(x))
+st.write(type(x_example))
 #fig2 = px.line(x = train["Height"], y = )
 #st.plotly_chart(fig2, theme="streamlit", use_container_width=True)
 lin_pred = lin_reg.predict(x_test)
