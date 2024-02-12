@@ -10,17 +10,29 @@ data = pd.read_csv("data.csv")
 st.header('The Data')
 st.write(data.head())
 
-st.header('The Training Data')
+
 x = data.iloc[:, :-1]
 y = data.iloc[:, -1]
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.1, random_state=0)
 train = pd.merge(x_train, y_train,  left_index=True, right_index=True)
-st.write(train.head())
 
+st.header('The Training Data')
+st.write(train.head())
 st.scatter_chart(data=train, x = 'Height', y = 'Weight')
 
 lin_reg = LinearRegression()
 lin_reg.fit(x_train, y_train)
+
+st.header("Linear Regression")
+st.caption("A linear regression model will now be fit to the training data.")
+
+plt.scatter(x_train, y_train, color="red")
+plt.plot(x_train, lin_reg.predict(x_train), color="blue" )
+plt.title("Height and Weight - Training Set")
+plt.xlabel("Height")
+plt.ylabel("Weight")
+st.write(plt.show())
+
 
 lin_pred = lin_reg.predict(x_test)
 results = pd.DataFrame(data = {"pred": lin_pred, "act": y_test})
