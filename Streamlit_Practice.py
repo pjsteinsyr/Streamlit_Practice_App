@@ -6,6 +6,7 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 import plotly.graph_objects as go
+from sklearn import metrics
 
 st.title("Peter's Practice Site")
 data = pd.read_csv("data.csv")
@@ -39,6 +40,8 @@ lin_pred = lin_reg.predict(x_test)
 results = pd.DataFrame(data = {"pred": lin_pred, "act": y_test})
 results['hgt'] = x_test
 st.write(results)
+st.write('R square = ',metrics.r2_score(y_test, lin_pred))
+st.write('Mean squared Error = ',metrics.mean_squared_error(y_test, lin_pred))
 
 st.header('Try it for yourself!')
 
