@@ -32,10 +32,13 @@ example = train
 example['pred'] = lin_reg.predict(x_train)
 fig = px.scatter(x=example['Height'], y=example['Weight'])
 fig.add_trace(go.Scatter(x=example['Height'], y=example['pred'], marker = {'color' : 'red'}, name="Model"))
-
 st.plotly_chart(fig, theme="streamlit", use_container_width=True)
+
+st.header('Model Testing')
 lin_pred = lin_reg.predict(x_test)
 results = pd.DataFrame(data = {"pred": lin_pred, "act": y_test})
 results['hgt'] = x_test
-st.write(results.head())
+st.write(results)
+
+st.header('Try it for yourself!')
 
