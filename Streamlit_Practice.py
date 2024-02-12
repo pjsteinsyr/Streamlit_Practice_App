@@ -9,6 +9,4 @@ st.title("Peter's Practice Site")
 data = pd.read_csv("data.csv")
 x = data.iloc[:, :-1]
 y = data.iloc[:, -1]
-
-st.write(x)
-st.write(y)
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.05, random_state=0)
