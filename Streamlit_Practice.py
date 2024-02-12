@@ -51,8 +51,8 @@ st.write(results)
 st.write(f'R square = {metrics.r2_score(y_test, lin_pred)}')
 st.write(f'Mean squared Error = {metrics.mean_squared_error(y_test, lin_pred)}')
 
-st.header('Try it for yourself!')
-number = st.number_input('Insert your height (cms)')
+st.sidebar.header('Try it for yourself!')
+number = st.sidebar.number_input('Insert your height (cms)')
 ur_number = pd.DataFrame(data = {"Height" : [number]})
 if st.button("Print Weight"):
     # Display the entered number when the button is clicked
