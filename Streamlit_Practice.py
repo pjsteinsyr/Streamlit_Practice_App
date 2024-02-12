@@ -15,6 +15,7 @@ lin_reg = LinearRegression()
 lin_reg.fit(x_train, y_train)
 
 lin_pred = lin_reg.predict(x_test)
-results = pd.DataFrame(data = {"pred": lin_pred, "act": y_test, "height": x_test})
+results = pd.DataFrame(data = {"pred": lin_pred, "act": y_test})
 st.write(results.head())
+st.write(x_test)
 
