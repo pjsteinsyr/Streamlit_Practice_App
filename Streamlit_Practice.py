@@ -27,7 +27,7 @@ lin_reg.fit(x_train, y_train)
 st.header("Linear Regression")
 st.caption("A linear regression model will now be fit to the training data.")
 
-fig = px.scatter(data = train, x = 'Height', y = 'Weight') 
+fig = px.scatter(train, x = 'Height', y = 'Weight') 
 st.plotly(fig)
 #st.line_chart(x = x_train, y = lin_reg.predict(x_train), color="blue" )
 
