@@ -47,3 +47,5 @@ st.header('Try it for yourself!')
 number = st.number_input('Insert a number')
 #your_prediction = lin_reg.predict(number)[0]
 st.write(number)
+ur_pred = lin_reg.predict([number])
+st.write(ur_pred)
