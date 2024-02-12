@@ -48,4 +48,4 @@ number = st.number_input('Insert your height (cms)')
 ur_number = pd.DataFrame(data = {"Height" : [number]})
 if st.button("Print Weight"):
     # Display the entered number when the button is clicked
-    st.write(f"Your estimated weight is {round(in_reg.predict(ur_number)[0],2)}")
+    st.write(f"Your estimated weight is {round(lin_reg.predict(ur_number)[0],2)}")
