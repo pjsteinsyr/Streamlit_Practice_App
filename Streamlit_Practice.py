@@ -6,5 +6,5 @@ import pandas as pd
 st.title("Peter's Practice Site")
 data = pd.read_csv("data.csv")
 fig, ax = plt.subplots()
-ax.hist(data.height, bins = 10)
+ax.hist(data.Height, bins = 10)
 st.pyplot(fig)
