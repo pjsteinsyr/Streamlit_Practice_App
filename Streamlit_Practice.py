@@ -14,7 +14,9 @@ st.header('The Training Data')
 x = data.iloc[:, :-1]
 y = data.iloc[:, -1]
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.1, random_state=0)
-st.write(x_train, y_train)
+training = pd.DataFrame(data = {"height": x_train})
+training['weight'] = y_train
+st.write(training)
 lin_reg = LinearRegression()
 lin_reg.fit(x_train, y_train)
 
