@@ -44,8 +44,8 @@ st.write(f'R square = {metrics.r2_score(y_test, lin_pred)}')
 st.write(f'Mean squared Error = {metrics.mean_squared_error(y_test, lin_pred)}')
 
 st.header('Try it for yourself!')
-number = st.number_input('Insert a number')
-ur_number = pd.DataFrame(data = {"Height" : [number]})
+number = st.number_input('Insert your weight (kgs)')
+ur_number = pd.DataFrame(data = {"Weight" : [number]})
 if st.button("Print Number"):
     # Display the entered number when the button is clicked
-    st.write(f"The entered number is: {lin_reg.predict(ur_number)[0]}")
+    st.write(f"Your estimated height is {lin_reg.predict(ur_number)[0]}")
