@@ -2,6 +2,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import scikit-learn as sklearn
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 
