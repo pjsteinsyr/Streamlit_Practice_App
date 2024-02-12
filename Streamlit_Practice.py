@@ -35,8 +35,11 @@ st.plotly_chart(fig1, theme="streamlit", use_container_width=True)
 example = train
 example['pred'] = lin_reg.predict(x_train)
 st.write(example)
+
+fig = px.scatter(x=train['Height'], y=train['Weight'])
+fig.add_trace(go.Scatter(x=train['Height'], y=train['pred'])
 #fig2 = px.line(example, x = "Height", y = "pred")
-#st.plotly_chart(fig2, theme="streamlit", use_container_width=True)
+st.plotly_chart(fig, theme="streamlit", use_container_width=True)
 lin_pred = lin_reg.predict(x_test)
 results = pd.DataFrame(data = {"pred": lin_pred, "act": y_test})
 results['hgt'] = x_test
