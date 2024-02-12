@@ -18,7 +18,7 @@ train = pd.merge(x_train, y_train,  left_index=True, right_index=True)
 st.write(train.head())
 
 fig, ax = plt.subplots()
-ax.plot(train['Height'], train['Weight'])
+ax.scatter(train['Height'], train['Weight'])
 st.pyplot(fig)
 
 lin_reg = LinearRegression()
