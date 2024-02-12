@@ -19,7 +19,8 @@ train = pd.merge(x_train, y_train,  left_index=True, right_index=True)
 
 st.header('The Training Data')
 st.write(train.head())
-st.scatter_chart(data=train, x = 'Height', y = 'Weight')
+fig = px.scatter(train, x = 'Height', y = 'Weight') 
+st.plotly_chart(fig, theme="streamlit", use_container_width=True)
 
 lin_reg = LinearRegression()
 lin_reg.fit(x_train, y_train)
