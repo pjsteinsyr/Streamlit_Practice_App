@@ -28,14 +28,11 @@ lin_reg.fit(x_train, y_train)
 
 st.header("Linear Regression")
 st.caption("A linear regression model will now be fit to the training data.")
-
-
 example = train
 example['pred'] = lin_reg.predict(x_train)
-st.write(example)
-
 fig = px.scatter(x=example['Height'], y=example['Weight'])
 fig.add_trace(go.Scatter(x=example['Height'], y=example['pred']))
+
 st.plotly_chart(fig, theme="streamlit", use_container_width=True)
 lin_pred = lin_reg.predict(x_test)
 results = pd.DataFrame(data = {"pred": lin_pred, "act": y_test})
