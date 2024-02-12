@@ -48,4 +48,4 @@ number = st.number_input('Insert a number')
 #your_prediction = lin_reg.predict(number)[0]
 if st.button("Print Number"):
     # Display the entered number when the button is clicked
-    st.write(f"The entered number is: {type([number])}{type(x_test)}")
+    st.write(f"The entered number is: {type(pd.DataFrame(data = {"Height" : [number]}))}{type(x_test)}")
