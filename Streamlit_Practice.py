@@ -32,10 +32,10 @@ fig1 = px.scatter(train, x = 'Height', y = 'Weight')
 
 st.plotly_chart(fig1, theme="streamlit", use_container_width=True)
 
-x_example = x_train
-y_example = lin_reg.predict(x_train)
+example = x_train
+example['pred'] = lin_reg.predict(x_train)
 
-st.write(type(x_example))
+st.write(type(example))
 #fig2 = px.line(x = train["Height"], y = )
 #st.plotly_chart(fig2, theme="streamlit", use_container_width=True)
 lin_pred = lin_reg.predict(x_test)
