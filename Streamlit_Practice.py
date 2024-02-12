@@ -9,10 +9,12 @@ st.title("Peter's Practice Site")
 data = pd.read_csv("data.csv")
 st.header('The Data')
 st.write(data.head())
+
+st.header('The Training Data')
 x = data.iloc[:, :-1]
 y = data.iloc[:, -1]
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.1, random_state=0)
-
+st.write(pd.DataFrame(data={'height':x,'weight':y}))
 lin_reg = LinearRegression()
 lin_reg.fit(x_train, y_train)
 
