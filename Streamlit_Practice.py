@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
+import plotly.graph_objects as go
 
 st.title("Peter's Practice Site")
 data = pd.read_csv("data.csv")
