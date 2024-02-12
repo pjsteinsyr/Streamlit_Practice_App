@@ -45,4 +45,5 @@ st.write(f'Mean squared Error = {metrics.mean_squared_error(y_test, lin_pred)}')
 
 st.header('Try it for yourself!')
 number = st.number_input('Insert a number')
-st.write(lin_reg.predict(number))
+your_prediction = lin_reg.predict(number)[0]
+st.write(your_prediction)
