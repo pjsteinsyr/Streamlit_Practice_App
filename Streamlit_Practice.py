@@ -10,3 +10,11 @@ data = pd.read_csv("data.csv")
 x = data.iloc[:, :-1]
 y = data.iloc[:, -1]
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.05, random_state=0)
+
+lin_reg = LinearRegression()
+lin_reg.fit(x_train, y_train)
+
+lin_pred = lin_reg.predict(x_test)
+results = pd.DataFrame(data = {"pred": lin_pred, "act": y_test})
+st.write(results)
+
